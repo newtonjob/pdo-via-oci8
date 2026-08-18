@@ -10,8 +10,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "ext-pdo": "*",
-        "ext-oci8": "*"
+        "ext-pdo": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.4|^9.0"
@@ -19,7 +18,10 @@
     "autoload": {
         "psr-4": {
             "Yajra\\": "src/"
-        }
+        },
+        "files": [
+            "polyfill/polyfill.php"
+        ]
     },
     "extra": {
         "branch-alias": {

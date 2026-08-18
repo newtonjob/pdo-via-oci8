@@ -120,12 +120,6 @@ class Statement extends PDOStatement
      */
     public function __construct($sth, Oci8 $connection, array $options = [])
     {
-        if (strtolower(get_resource_type($sth)) != 'oci8 statement') {
-            throw new Oci8Exception(
-                'Resource expected of type oci8 statement; '.get_resource_type($sth).' received instead'
-            );
-        }
-
         $this->sth = $sth;
         $this->connection = $connection;
         $this->options = $options;
